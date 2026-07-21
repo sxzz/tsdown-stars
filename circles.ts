@@ -132,7 +132,18 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${
 ${body}</svg>
 `
 
-const optimized = optimize(svg, { multipass: true }).data
+const optimized = optimize(svg, {
+  multipass: true,
+  plugins: [
+    {
+      name: 'preset-default',
+      params: {
+        // it strips the SVG 2 `href` attribute from `<a>` elements
+        overrides: { removeUnknownsAndDefaults: false },
+      },
+    },
+  ],
+}).data
 await writeFile('./circles.svg', optimized)
 console.info(
   `Wrote circles.svg (${(svg.length / 1e6).toFixed(2)}MB -> ${(optimized.length / 1e6).toFixed(2)}MB)`,
