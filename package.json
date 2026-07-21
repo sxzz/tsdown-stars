@@ -1,0 +1,23 @@
+{
+  "type": "module",
+  "packageManager": "pnpm@11.15.1",
+  "private": true,
+  "scripts": {
+    "start": "node index.ts",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "es-toolkit": "^1.49.0",
+    "top-github-dependents-by-stars": "^1.0.4"
+  },
+  "devDependencies": {
+    "@sxzz/eslint-config": "^8.2.1",
+    "@sxzz/prettier-config": "^2.3.2",
+    "@types/node": "^26.1.1",
+    "eslint": "^10.7.0",
+    "prettier": "^3.9.6",
+    "typescript": "^7.0.2"
+  },
+  "prettier": "@sxzz/prettier-config"
+}
