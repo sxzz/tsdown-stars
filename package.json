@@ -11,6 +11,7 @@
   "dependencies": {
     "d3-hierarchy": "^3.1.2",
     "es-toolkit": "^1.49.0",
+    "svgo": "^4.0.2",
     "top-github-dependents-by-stars": "^1.0.4"
   },
   "devDependencies": {

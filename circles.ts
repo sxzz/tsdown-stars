@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { writeFile } from 'node:fs/promises'
 import { setTimeout as sleep } from 'node:timers/promises'
 import { hierarchy, pack } from 'd3-hierarchy'
+import { optimize } from 'svgo'
 import { data } from './data.ts'
 
 interface Owner {
@@ -123,7 +124,7 @@ for (const [index, circle] of circles.entries()) {
   if (!avatar) continue
   const { x, y, r } = circle
   body += `<clipPath id="c${index}"><circle cx="${x.toFixed(2)}" cy="${y.toFixed(2)}" r="${r.toFixed(2)}"/></clipPath>`
-  body += `<image clip-path="url(#c${index})" x="${(x - r).toFixed(2)}" y="${(y - r).toFixed(2)}" width="${(r * 2).toFixed(2)}" height="${(r * 2).toFixed(2)}" href="${avatar}"><title>${circle.data.login} (${circle.data.stars} stars)</title></image>`
+  body += `<a href="https://github.com/${circle.data.login}" target="_blank"><image clip-path="url(#c${index})" x="${(x - r).toFixed(2)}" y="${(y - r).toFixed(2)}" width="${(r * 2).toFixed(2)}" height="${(r * 2).toFixed(2)}" href="${avatar}"><title>${circle.data.login} (${circle.data.stars} stars)</title></image></a>`
   body += '\n'
 }
 
@@ -131,5 +132,8 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${WIDTH}" height="${
 ${body}</svg>
 `
 
-await writeFile('./circles.svg', svg)
-console.info('Wrote circles.svg')
+const optimized = optimize(svg, { multipass: true }).data
+await writeFile('./circles.svg', optimized)
+console.info(
+  `Wrote circles.svg (${(svg.length / 1e6).toFixed(2)}MB -> ${(optimized.length / 1e6).toFixed(2)}MB)`,
+)
