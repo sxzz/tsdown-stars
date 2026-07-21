@@ -1,3 +1,6 @@
+<details>
+<summary><b>Projects using tsdown with over 100 stars (A total of 873 as of 2026-07-22)</b></summary>
+
 | url                                                                              | stars  |
 | -------------------------------------------------------------------------------- | ------ |
 | https://github.com/openclaw/openclaw                                             | 383.7k |
@@ -147,8 +150,8 @@
 | https://github.com/acacode/swagger-typescript-api                                | 4.1k   |
 | https://github.com/ericc-ch/copilot-api                                          | 4.1k   |
 | https://github.com/groupultra/telegram-search                                    | 4.0k   |
-| https://github.com/alovajs/alova                                                 | 4.0k   |
 | https://github.com/likec4/likec4                                                 | 4.0k   |
+| https://github.com/alovajs/alova                                                 | 4.0k   |
 | https://github.com/archestra-ai/archestra                                        | 4.0k   |
 | https://github.com/t3-oss/t3-env                                                 | 4.0k   |
 | https://github.com/cloudflare/capnweb                                            | 3.9k   |
@@ -185,7 +188,7 @@
 | https://github.com/postaljs/postal.js                                            | 2.8k   |
 | https://github.com/vuepress/core                                                 | 2.8k   |
 | https://github.com/ValentinH/react-easy-crop                                     | 2.8k   |
-| https://github.com/Simon-He95/markstream-vue                                     | 2.7k   |
+| https://github.com/Simon-He95/markstream-vue                                     | 2.8k   |
 | https://github.com/Rich-Harris/magic-string                                      | 2.7k   |
 | https://github.com/intlify/vue-i18n                                              | 2.7k   |
 | https://github.com/software-mansion/TypeGPU                                      | 2.7k   |
@@ -448,7 +451,7 @@
 | https://github.com/japa/runner                                                   | 505    |
 | https://github.com/scanaislop/aislop                                             | 496    |
 | https://github.com/ChatbotXIO/ChatbotX                                           | 496    |
-| https://github.com/vitest-dev/eslint-plugin-vitest                               | 492    |
+| https://github.com/vitest-dev/eslint-plugin-vitest                               | 493    |
 | https://github.com/hyunbinseo/holidays-kr                                        | 488    |
 | https://github.com/sveltejs/cli                                                  | 488    |
 | https://github.com/vuejs/vue-eslint-parser                                       | 487    |
@@ -873,3 +876,5 @@
 | https://github.com/disjukr/bunja                                                 | 100    |
 | https://github.com/LorisSigrist/zocker                                           | 100    |
 | https://github.com/progfay/scrapbox-parser                                       | 100    |
+
+</details>
