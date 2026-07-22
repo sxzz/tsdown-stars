@@ -4,7 +4,6 @@ import { data, date } from './data.ts'
 
 const compact = new Intl.NumberFormat('en', {
   notation: 'compact',
-  minimumFractionDigits: 1,
   maximumFractionDigits: 1,
 })
 
